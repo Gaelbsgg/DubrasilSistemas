@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dubrasil Sistemas</title>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div class="topo">
+    <!-- Botão do menu lateral -->
+    <div class="menutopo">
+      <button id="btnlateral">☰</button>
+    </div>
+    <!-- Botão de alternar tema (canto superior direito) -->
+    <div class="tema">
+      <button id="btntema"><i class="bi bi-cloud-moon-fill"></i></button>
+    </div>
+    <!-- Menu lateral -->
+    <div id="menu" class="menu">
+      <a href="index.html">Início</a>
+      <a href="chamados.html">HelpDesk</a>
+      <a href="tutoriais.html">Tutoriais</a>
+      <a href="#contatos">Contatos</a>
+    </div>
+    <!-- Mini mapa -->
+    <span class="localizacaoicon">
+      <i class="bi bi-geo-alt"></i>
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15021.074990080357!2d-47.9391743!3d-19.7437333!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bad1cd7df5f89d%3A0x6962f422e2242be4!2zRHVCcmFzaWwgU29sdcOnw7Vlcw!5e0!3m2!1spt-BR!2sbr!4v1722262946451!5m2!1spt-BR!2sbr"
+          width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </span>
+  </div>
+  <!-- Login e Cadastro -->
+  <div class="login" style="text-decoration: none;">
+    <a href="Login/login.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><i class="bi bi-person-check" style="text-decoration: none;"> Login</i></a>
+  </div>
+  <!-- Barra de Pesquisa -->
+  <div class="barrapesquisa">
+    <input id="searchInput" type="text" placeholder="Digite aqui o que você procura" oninput="search()">
+    <div id="resultados" class="resultados" style="display: none;"></div>
+  </div>
+  <!-- Conteúdo Principal -->
+  <div class="sobrecontainer">
+    <section id="sobre">
+      <div class="conteudo">
+        <h2>DuBrasil <span class="spansobre">Sistemas</span>
+        </h2>
+        <p> Disponibilizando as melhores soluções que aumentem a produtividade e rentabilidade de seus
+          negócios, proporcionando a melhor experiência em atendimento do mercado.<br>
+          referência em Uberaba e região como a melhor empresa de suporte técnico para soluções de gestão
+          empresarial.<br></p>
+      </div>
+    </section>
+  </div>
+  </div>
+  <!-- Conteúdo TGA -->
+  <div class="tgacontainer">
+    <section id="tga">
+      <div class="conteudo">
+        <h2>TGA <span class="spantga">Software de Gestão ERP</span>
+        </h2>
+        <p> Sistema de gestão empresarial simples e completo<br>
+          Controle todo seu negócio em um só lugar!</p>
+        <a href="https://wa.me/5534998647297?text=Olá,%20quero%20fazer%20um%20orçamento!" class="btn"
+          target="_blank">Saiba mais!</a>
+      </div>
+    </section>
+  </div>
+  <!--  Conteúdo SECULLUM -->
+  <div class="secullumcontainer">
+    <section id="secullum">
+      <div class="conteudo">
+        <h2>SECULLUM <span class="spansecullum"> Software de Ponto e Acesso</span>
+        </h2>
+        <p> Softwares de Ponto que permite o controle de jornada automatizando o registro e cálculo do cartão
+          ponto de funcionários e otimizando o tempo de gestores e profissionais de RH, disponível nos planos
+          Offline e Web.</p>
+        <a href="https://wa.me/5534998647297?text=Olá,%20quero%20fazer%20um%20orçamento!" class="btn"
+          target="_blank">Saiba mais!</a>
+      </div>
+    </section>
+  </div>
+  <!-- Conteúdo PRODUTOS -->
+  <section class="produtos" id="produtos">
+    <h2 class="titulo">NOSSOS <span>PRODUTOS</span></h2>
+    <div class="box-container">
+      <div class="box">
+        <img src="/img/catracas.png" alt="1">
+        <h3>CATRACAS</h3>
+        <div class="preço">R$300,00 <span>R$500,00</span></div>
+        <a href="https://wa.me/5534998647297?text=Olá,%20quero%20fazer%20um%20orçamento!" class="btn"
+          target="_blank">Comprar!</a>
+      </div>
+      <div class="box">
+        <img src="/img/produtos-ponto.png" alt="2">
+        <h3>CONTROLE DE ACESSO</h3>
+        <div class="preço">R$300,00 <span>R$500,00</span></div>
+        <a href="https://wa.me/5534998647297?text=Olá,%20quero%20fazer%20um%20orçamento!" class="btn"
+          target="_blank">Comprar!</a>
+      </div>
+      <div class="box">
+        <img
+          src="https://www.dubrasilsolucoes.com.br/static/media/identificacao-corporativa-produto-800x865.1134a924ec4d80228c6c.png"
+          alt="5">
+        <h3>CRACHÁS</h3>
+        <div class="preço">R$300,00 <span>R$500,00</span></div>
+        <a href="https://wa.me/5534998647297?text=Olá,%20quero%20fazer%20um%20orçamento!" class="btn"
+          target="_blank">Comprar!</a>
+      </div>
+      <div class="box">
+        <img src="/img/relogio-ponto.png" alt="6">
+        <h3>RELÓGIOS DE PONTO</h3>
+        <div class="preço">R$300,00 <span>R$500,00</span></div>
+        <a href="https://wa.me/5534998647297?text=Olá,%20quero%20fazer%20um%20orçamento!" class="btn"
+          target="_blank">Comprar!</a>
+      </div>
+    </div>
+  </section>
+  <!-- Conteúdo SERVIÇOS -->
+  <section class="produtos" id="servicos">
+    <h2 class="titulo">NOSSOS <span>SERVIÇOS</span></h2>
+    <div class="box-container">
+      <div class="box">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8aGTiSvzxtO7sDLPInzPnlAMk7Z8ai7jBY5kZVPtXOHPCvRDBXd-J59CgCR1hmGqh2nc&usqp=CAU"
+          alt="3" style="border-radius: 50%;">
+        <h3>TGA</h3>
+        <div class="preço">R$300,00 <span>R$500,00</span></div>
+        <a href="https://wa.me/5534998647297?text=Olá,%20quero%20fazer%20um%20orçamento!" class="btn"
+          target="_blank">Contratar</a>
+      </div>
+      <div class="box">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOD85qzPWGdIBvWhBIxF2ojYAN8e7PYW3V-w&s" alt="4"
+          style="border-radius: 50%;">
+        <h3>SECULLUM</h3>
+        <div class="preço">R$300,00 <span>R$500,00</span></div>
+        <a href="https://wa.me/5534998647297?text=Olá,%20quero%20fazer%20um%20orçamento!" class="btn"
+          target="_blank">Contratar</a>
+      </div>
+    </div>
+  </section>
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
