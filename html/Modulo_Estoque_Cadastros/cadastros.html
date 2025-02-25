@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubrasil soluções</title>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/estoque.css">
+</head>
+
+<body>
+    <div class="topo">
+        <!-- Botão do menu lateral -->
+        <div class="menutopo">
+            <button id="btnlateral">☰</button>
+        </div>
+        <!-- Botão de alternar tema (canto superior direito) -->
+        <div class="tema">
+            <button id="btntema"><i class="bi bi-cloud-moon-fill"></i></button>
+        </div>
+        <!-- Menu lateral -->
+        <div id="menu" class="menu">
+            <a href="index.html">Início</a>
+            <a href="chamados.html">HelpDesk</a>
+            <a href="tutoriais.html">Tutoriais</a>
+            <a href="#contatos">Contatos</a>
+            <ul class="indice" id="indice">
+                <li>
+                    <a href="#">Módulo estoque</a>
+                    <ul class="cadastros">
+                        <li>
+                            <a href="">Cadastros</a>
+                            <ul class="subcadastros">
+                                <li><a href="#">Produtos/Serviços</a></li>
+                                <li><a href="#">Grupos</a></li>
+                                <li><a href="#">Sub Grupos</a></li>
+                                <li><a href="#">Fabricantes</a></li>
+                                <li><a href="#">Representantes</a></li>
+                                <li><a href="#">Funcionários</a></li>
+                                <li><a href="#">Transportadoras</a></li>
+                                <li><a href="#">Cliente/Fornecedores</a></li>
+                                <li><a href="#">Veículos</a></li>
+                                <li><a href="#">Marca</a></li>
+                                <li><a href="#">Promoção de Produtos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Mini mapa -->
+        <span class="localizacaoicon">
+            <i class="bi bi-geo-alt"></i>
+            <div class="mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15021.074990080357!2d-47.9391743!3d-19.7437333!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bad1cd7df5f89d%3A0x6962f422e2242be4!2zRHVCcmFzaWwgU29sdcOnw7Vlcw!5e0!3m2!1spt-BR!2sbr!4v1722262946451!5m2!1spt-BR!2sbr"
+                    width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </span>
+    </div>
+    <!-- Barra de Pesquisa -->
+    <div class="barrapesquisa">
+        <input id="searchInput" type="text" placeholder="Digite aqui o que você procura" oninput="search()">
+        <div id="resultados" class="resultados" style="display: none;"></div>
+    </div>
+    <!-- Cabeçalho -->
+    <header>
+        <nav class="pesquisa">
+            <input type="text" id="searchInput" placeholder="Busque a sua pergunta ou palavra chave aqui">
+        </nav>
+    </header>
+    <!-- Conteúdos -->
+    <div class="conteudos">
+        <div class="tituloestoque">
+            <h2>Módulo <span>Estoque</span></h2>
+            <p> Clarezas nas informações de venda, PDV e TEF, emissão de
+                documentos fiscais, controle de produção,<br>
+                integração com balanças, controle total do seu estoque e negócio em um único
+                lugar.<br>
+            </p>
+            <img src="/img/Estoque.png" alt="Estoque" style="width: 300px; height: 300px; border-radius: 25%;">
+        </div>
+        <div class="cadastros_titulo">
+            <h2>Cadastros</h2>
+            <p> Na aba cadastros localizada no canto superior esquerdo você encontrará as opções para cadastrar ou
+                consultar as principais<br>
+                identificações utilizadas para determinar produtos/serviços, grupos, sub grupos, fabricantes,
+                representantes, funcionários,<br>
+                transportadoras, clientes/fornecedores, veículos, marcas ou a ferramenta de Promoção.<br>
+            </p>
+            <div class="video1">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="produtos">
+            <h2>Produtos</h2>
+            <p> Aqui você irá cadastrar seus produtos ou serviços classificando-os por <br>
+                grupos, sub grupos, fabricantes,
+                unidades de medidas, classificação fiscal, custos e preços de vendas. <br>
+            </p>
+            <div class="video2">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="gtin">
+            <h2>Código de Barras (GTIN)</h2>
+            <p> Caso seu produto tenha códigos de Barras Digite ou passe o seu leitor de Código de Barras <br>
+                no código do seu produto com este campo selecionado.
+            </p>
+            <div class="video3">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="nome_fantasia">
+            <h2>Nome Fantasia</h2>
+            <p> Informe o nome fantasia do seu Produto no campo Nome Fantasia selecionado.<br></p>
+            <div class="video4">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="grupo">
+            <h2>Grupos</h2>
+            <p> Preencha este campo com o código do Grupo adequado para o produto que você está cadastrando. <br>
+                Caso não tenha o Grupo específico para seu produto será necessário cadastrar e posteriormente finalizar
+                <br>
+                o processo de cadastro do produto (para saber como cadastrar um Grupo clique aqui!).<br>
+            </p>
+            <div class="video5">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="subgrupo">
+            <h2>Sub Grupos</h2>
+            <p> Preencha este campo com o código do Sub Grupo adequado para o produto que você está cadastrando. <br>
+                Caso não tenha o Sub Grupo específico para seu produto será necessário cadastrar e posteriormente <br>
+                finalizar o processo de cadastro do produto (para saber como cadastrar um Sub Grupo clique aqui!).<br>
+            </p>
+            <div class="video6">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="fabricante">
+            <h2>Fabricante</h2>
+            <p> Preencha este campo com o código do Fabricante do produto que você está cadastrando. <br>
+                Caso não tenha o Fabricante deste produto específico será necessário cadastrar e posteriormente <br>
+                finalizar o processo de cadastro do produto (para saber como cadastrar um Fabricante clique aqui!).<br>
+            </p>
+            <div class="video7">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="reffabricante">
+            <h2>Referência do Fabricante</h2>
+            <p> Caso seu produto tenha fabricante ele terá na Nota Fiscal de compra ou no rótulo do seu produto um
+                código <br>
+                interno de seu fabricante. Com o processo de entrada de Nota Fiscal ele será preenchido automaticamente,
+                <br>
+                caso seja de fabricação própria ou este campo não seja preenchido manualmente o sistema copiará o código
+                <br>
+                sequencial da numeração da sua base de dados. <br>
+            </p>
+            <div class="video8">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="reffornecedor">
+            <h2>Referência do Fornecedor</h2>
+            <p> Assim como a referência do Fabricante seu produto pode ser fornecido por um fornecedor independente do
+                <br>
+                fabricante e ele terá na Nota Fiscal de compra um código interno de seu fornecedor. Caso queira preencha
+                <br>
+                este campo com o código presente na Nota Fiscal de compra. <br>
+            </p>
+            <div class="video9">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="ncm">
+            <h2>Classificação Fiscal (NCM)</h2>
+            <p> A Nomenclatura Comum do Mercosul (NCM), um código que ajuda a identificar produtos em circulação no <br>
+                Brasil, Argentina, Paraguai, Uruguai e demais países parte do Mercosul. A presença do código NCM é <br>
+                obrigatória em sua nota fiscal eletrônica — seja comercializado no mercado interno ou externo. <br>
+            </p>
+            <div class="video10">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="unidade">
+            <h2>Unidades de Controle, Compra e Venda</h2>
+            <p> As unidades de Controle, Compra e Venda são a classificação para o sistema da unidade de medida que será
+                <br>
+                usada no controle/manuseio deste produto no sistema e em sua empresa, assim como na hora da compra e
+                <br>
+                venda do mesmo. <br>
+            </p>
+            <div class="video11">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="prateleira">
+            <h2>Prateleira e Locação</h2>
+            <p> Este campo é destinado para facilitar a procura do produto em sua empresa, galpão ou almoxarifado <br>
+                permitindo que você informe em qual prateleira e/ou local que ele está guardado. <br>
+            </p>
+            <div class="video12">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="produto_servico">
+            <h2>Produto ou Serviço</h2>
+            <p> Está opção irá determinar se você está cadastrando um produto ou serviço. <br></p>
+            <div class="video13">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="especifico">
+            <h2>Específico</h2>
+            <p> Está área é destinada a especificação deste equipamento como Produtos Geral, Medicamentos, Veículos <br>
+                novos, Armas de fogo ou Derivados de Petróleo. <br></p>
+            <div class="video14">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+        <div class="tipoitem">
+            <h2>Tipo do Item (SPED)</h2>
+            <p> O Tipo do Item identifica o destino do produto para a empresa. <br>
+                No momento do cadastro é muito importante que seja feita adequadamente a indicação da finalidade do <br>
+                produto para a empresa, ou seja, o que a empresa vai fazer com aquele item que está sendo cadastrado. Os <br>
+                tipos são: <br>
+                00: Mercadoria para Revenda;01: Matéria-Prima;02: Embalagem;03: Produto em Processo;04: Produto <br>
+                Acabado;05: Subproduto;06: Produto Intermediário;07: Material de Uso e Consumo;08: Ativo mobilizado;09: <br>
+                Serviços;10: Outros insumos;99: Outras. <br></p>
+            <div class="video15">
+                <video controls="controls" autoplay="autoplay">
+                    <source src="/video/Estoque_Cadastros.mp4" type="video/mp4">
+                    <object data="" width="320" height="240">
+                        <embed width="320" height="240" src="/video/Estoque_Cadastros.mp4">
+                    </object>
+                </video>
+            </div>
+        </div>
+    </div>
+    <script src="/js/estoque.js"></script>
+</body>
+
+</html>

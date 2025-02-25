@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu com Lista e Sublista</title>
+    <style>
+        /*      <li><a href="">Produtos/Serviços</a></li>
+                <li><a href="">Grupos</a></li>
+                <li><a href="#">Sub Grupos</a></li>
+                <li><a href="#">Fabricantes</a></li>
+                <li><a href="#">Representantes</a></li>
+                <li><a href="#">Funcionários</a></li>
+                <li><a href="#">Transportadoras</a></li>
+                <li><a href="#">Cliente/Fornecedores</a></li>
+                <li><a href="#">Veículos</a></li>
+                <li><a href="#">Marca</a></li>
+                <li><a href="#">Promoção de Produtos</a></li>
+        */
+
+
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Índice */
+        .indice {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            color: white;
+        }
+
+        .indice>li {
+            position: relative;
+        }
+
+        .indice>li a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .indice>li a:hover {
+            background-color: #555;
+        }
+
+        /* Cadastros */
+        .cadastros {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            padding: 0;
+            margin: 0;
+            display: none;
+            z-index: 1;
+        }
+
+        .cadastros li a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .cadastros li a:hover {
+            background-color: #666;
+        }
+
+        /* Exibir o submenu ao passar o mouse */
+        .indice>li:hover .cadastros {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="indice" id="indice">
+        <li>
+            <a href="#">Módulo estoque</a>
+            <ul class="cadastros">
+                <li>
+                    <a href="">Cadastros</a>
+                    <ul class="subcadastros">
+                        <li><a href="#">Produtos/Serviços</a></li>
+                        <li><a href="#">Grupos</a></li>
+                        <li><a href="#">Sub Grupos</a></li>
+                        <li><a href="#">Fabricantes</a></li>
+                        <li><a href="#">Representantes</a></li>
+                        <li><a href="#">Funcionários</a></li>
+                        <li><a href="#">Transportadoras</a></li>
+                        <li><a href="#">Cliente/Fornecedores</a></li>
+                        <li><a href="#">Veículos</a></li>
+                        <li><a href="#">Marca</a></li>
+                        <li><a href="#">Promoção de Produtos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>
+
+
+/* */

@@ -1,0 +1,929 @@
+/* Configuração Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #1E90FF;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+.titulo {
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.titulo span {
+    color: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: var(--bg);
+    color: #111;
+}
+
+/* Menu Topo */
+
+.topo {
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    height: 2rem;
+    font-size: 24px;
+    background-color: #f1f1f1af;
+    color: #000000b0;
+    border: none;
+    border-radius: 1px;
+    z-index: 1;
+}
+
+.menutopo {
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    height: 2rem;
+    font-size: 24px;
+    background-color: #f1f1f1af;
+    color: #000000b0;
+    border: none;
+    border-radius: 1px;
+}
+
+.menutopo button {
+    background-color: transparent;
+}
+
+/* Botão do menu lateral */
+
+#btnlateral {
+    position: fixed;
+    height: 2rem;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1000;
+    color: #000000b0;
+    border: none;
+    padding: 2px 10px;
+    border-radius: 5px;
+}
+
+/* Botão de alternar tema (canto superior direito) */
+
+.tema {
+    position: fixed;
+    height: 0.5rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+.tema button {
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+    background-color: transparent;
+    border: none;
+    padding: 1px 12px;
+    border-radius: 5px;
+}
+
+/* Menu Lateral */
+
+
+.menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s ease;
+
+}
+
+.menu a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Índice */
+.indice {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #333;
+}
+
+.indice>li {
+    position: relative;
+}
+
+.indice>li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.indice>li a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Cadastros */
+.cadastros {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+    color: #333;
+    z-index: 1;
+}
+
+.cadastros>li {
+    position: relative;
+}
+
+.cadastros>li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.cadastros>li a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Exibir o cadastros ao passar o mouse */
+.indice>li:hover .cadastros {
+    display: block;
+}
+
+/* Sub Índice Cadastros*/
+
+.subcadastros {
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+    z-index: 1;
+}
+
+.subcadastros li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s ease;
+}
+
+.subcadastros li a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Exibir o cadastros ao passar o mouse */
+.cadastros>li:hover .subcadastros {
+    display: block;
+}
+
+/* Mini mapa */
+
+.localizacaoicon {
+    cursor: pointer;
+    position: fixed;
+    font-size: 24px;
+    right: 25rem;
+    top: 0.2rem;
+    height: 1.5;
+    z-index: 1000;
+}
+
+.mapa {
+    display: none;
+    position: absolute;
+    top: 29px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid var(--main-color);
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Barra de Pesquisa */
+
+.barrapesquisa {
+    cursor: pointer;
+    position: fixed;
+    right: 5rem;
+    width: 300px;
+    height: 1.5rem;
+    top: 3px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.barrapesquisa input {
+    cursor: pointer;
+    position: fixed;
+    right: 5rem;
+    width: 300px;
+    height: 1.5rem;
+    top: 3px;
+    padding: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.barrapesquisa input[type="text"] {
+    padding: 0 5px;
+    width: 300px;
+    height: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.resultados {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    padding: 35px 5px;
+    width: 294px;
+    height: 5rem;
+    right: 5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Cabeçalho */
+
+.pesquisa {
+    width: 100%;
+    height: 10rem;
+    text-align: center;
+    background-color: #00aeef;
+}
+
+.pesquisa_input {
+    text-align: center;
+    border-radius: 50%;
+}
+
+.pesquisa input {
+    margin-top: 3rem;
+    width: 50%;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 16px 15px 70px;
+    height: auto;
+    line-height: normal;
+    font-size: 16px;
+    border: solid 1px #fff;
+}
+
+/* Conteúdos */
+
+.conteudos {
+    height: 49rem;
+    width: 99.8%;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .tituloestoque {
+    height: 39.2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.conteudos .tituloestoque h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 10rem;
+}
+
+.conteudos .tituloestoque span {
+    color: #fff;
+}
+
+.conteudos .tituloestoque p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding: 5rem;
+}
+
+/* Cadastros */
+
+.conteudos .cadastros_titulo {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .cadastros_titulo h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .cadastros_titulo p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .cadastros_titulo .video1 {
+    width: 100%;
+    height: 430px;
+    padding-top: 8rem;
+}
+
+.conteudos .cadastros_titulo .video1 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Produtos */
+
+.conteudos .produtos {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .produtos h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .produtos p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .produtos .video2 {
+    width: 100%;
+    height: 430px;
+    padding-top: 8rem;
+}
+
+.conteudos .produtos .video2 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Código de Barras GTIN */
+
+.conteudos .gtin {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .gtin h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .gtin p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .gtin .video3 {
+    width: 100%;
+    height: 430px;
+    padding-top: 8rem;
+}
+
+.conteudos .gtin .video3 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Nome Fantasia */
+
+.conteudos .nome_fantasia {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .nome_fantasia h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .nome_fantasia p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .nome_fantasia .video4 {
+    width: 100%;
+    height: 430px;
+    padding-top: 8rem;
+}
+
+.conteudos .nome_fantasia .video4 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Grupos */
+
+.conteudos .grupo {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .grupo h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .grupo p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .grupo .video5 {
+    width: 100%;
+    height: 430px;
+    padding-top: 8rem;
+}
+
+.conteudos .grupo .video5 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Sub Grupos */
+
+.conteudos .subgrupo {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .subgrupo h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .subgrupo p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .subgrupo .video6 {
+    width: 100%;
+    height: 430px;
+    padding-top: 8rem;
+}
+
+.conteudos .subgrupo .video6 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Fabricante  */
+
+.conteudos .fabricante {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .fabricante h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .fabricante p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .fabricante .video7 {
+    width: 100%;
+    height: 430px;
+}
+
+.conteudos .fabricante .video7 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Referência do Fabricante  */
+
+.conteudos .reffabricante {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .reffabricante h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .reffabricante p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .reffabricante .video8 {
+    width: 100%;
+    height: 430px;
+}
+
+.conteudos .reffabricante .video8 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Referência do Fornecedor  */
+
+.conteudos .reffornecedor {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .reffornecedor h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .reffornecedor p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .reffornecedor .video9 {
+    width: 100%;
+    height: 430px;
+}
+
+.conteudos .reffornecedor .video9 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Classificação Fiscal (NCM) */
+
+.conteudos .ncm {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .ncm h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .ncm p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .ncm .video10 {
+    width: 100%;
+    height: 430px;
+    padding-top: 8rem;
+}
+
+.conteudos .ncm .video10 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Unidade de Medida */
+
+.conteudos .unidade {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .unidade h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .unidade p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .unidade .video11 {
+    width: 100%;
+    height: 430px;
+    padding-top: 8rem;
+}
+
+.conteudos .unidade .video11 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Prateleira e Locação */
+
+.conteudos .prateleira {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .prateleira h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .prateleira p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .prateleira .video12 {
+    width: 100%;
+    height: 430px;
+    padding-top: 8rem;
+}
+
+.conteudos .prateleira .video12 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Produtos ou serviços */
+
+.conteudos .produto_servico {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .produto_servico h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .produto_servico p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .produto_servico .video13 {
+    width: 100%;
+    height: 430px;
+    padding-top: 8rem;
+}
+
+.conteudos .produto_servico .video13 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Específico */
+
+.conteudos .especifico {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .especifico h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .especifico p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .especifico .video14 {
+    width: 100%;
+    height: 430px;
+    padding-top: 8rem;
+}
+
+.conteudos .especifico .video14 video {
+    width: 50rem;
+    height: 34rem;
+}
+
+/* Tipo do Item (SPED) */
+
+.conteudos .tipoitem {
+    height: 57rem;
+    width: 99.8%;
+    text-align: center;
+    border: solid #333;
+    border-radius: 10px;
+}
+
+.conteudos .tipoitem h2 {
+    color: #1E90FF;
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .tipoitem p {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 100;
+    line-height: 1.2;
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.conteudos .tipoitem .video15 {
+    width: 100%;
+    height: 430px;
+    padding-top: 1rem;
+}
+
+.conteudos .tipoitem .video15 video {
+    width: 50rem;
+    height: 34rem;
+}
